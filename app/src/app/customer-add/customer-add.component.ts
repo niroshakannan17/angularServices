@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Customer } from '../models/customer';
+import { CustomerService } from '../service/customer.service';
 
 @Component({
   selector: 'app-customer-add',
@@ -8,15 +9,11 @@ import { Customer } from '../models/customer';
 })
 export class CustomerAddComponent {
 
-  customers:Customer[]=[];
+  constructor(private custService:CustomerService ){}
 
   addCustomer(custmerNmae:string){
 
-    const customer = new Customer();
-    customer.name = custmerNmae;
-    this.customers.push(customer);
-    
-    console.log(this.customers);
+    this.custService.add(custmerNmae);
 
   }
 
