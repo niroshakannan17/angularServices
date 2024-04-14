@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Customer } from '../models/customer';
 
 @Component({
   selector: 'app-customer-view',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class CustomerViewComponent {
 
+  customers:Customer[]=[
+    {name:'ht'},
+    {name:'yu'}
+  ];
 }

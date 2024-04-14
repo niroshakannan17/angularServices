@@ -2,5 +2,5 @@
 <p>
     <label>Customer name</label>
     <input #box>
-    <button> save</button>
+    <button (click)="addCustomer(box.value);box.value=''"> save</button>
 </p>
